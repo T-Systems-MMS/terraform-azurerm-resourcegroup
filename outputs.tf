@@ -1,9 +1,10 @@
-/*
-output "resource_group_id" {
-  description = "Resource group ID"
+output "resource_group" {
+  description = "azurerm_resource_group"
   value = {
-    for resource_group in azurerm_resource_group.resource_group:
-    resource_group.name => resource_group.id
+    for resource_group in  keys(azurerm_resource_group.resource_group):
+    resource_group => {
+      name = azurerm_resource_group.resource_group[resource_group].name
+      id   = azurerm_resource_group.resource_group[resource_group].id
+    }
   }
 }
-*/
