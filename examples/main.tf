@@ -1,6 +1,6 @@
 module "resource-groups" {
-  source        = "../terraform-resourcegroup"
-  location      = "westeurope"
+  source   = "../terraform-resourcegroup"
+  location = "westeurope"
   resource_name = [
     service-mgmt-rg,
     service-mgmt-rg,
