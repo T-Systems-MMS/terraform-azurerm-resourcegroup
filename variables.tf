@@ -1,24 +1,22 @@
-# resource definition
 variable "resource_name" {
-  type    = set(string)
-  default = ["rg"]
+  type        = set(string)
+  description = "Azure ResourceGroup"
 }
 variable "location" {
-  type = string
+  type        = string
+  description = "location where the resource should be created"
 }
 variable "tags" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
+  description = "mapping of tags to assign, default settings are defined within locals and merged with var settings"
 }
 
 locals {
-  # type constraints
-  # default values
   default = {
-    # resource definition
     tags = {}
   }
 
-  # merge custom and default values
+  # merge default and custom variables
   tags = merge(local.default.tags, var.tags)
 }
