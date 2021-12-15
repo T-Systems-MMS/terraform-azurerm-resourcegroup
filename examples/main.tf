@@ -1,11 +1,12 @@
-module "acr" {
-  source        = "../terraform-acr"
+module "resource-groups" {
+  source        = "../terraform-resourcegroup"
   location      = "westeurope"
-  resource_name = ["servicecr"]
-  acr = {
-    resource_group_name = "resource_group_name"
-    key_vault_id        = "keyvault_id"
-  }
+  resource_name = [
+    service-mgmt-rg,
+    service-mgmt-rg,
+    service-mgmt-live-rg,
+    service-mgmt-test-rg,
+  ]
   tags = {
     service = "service_name"
   }
