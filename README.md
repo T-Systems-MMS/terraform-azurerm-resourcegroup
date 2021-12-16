@@ -1,5 +1,3 @@
-# terraform-resourcegroup
-
 <!-- BEGIN_TF_DOCS -->
 # resource_group
 
