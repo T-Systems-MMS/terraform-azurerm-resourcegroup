@@ -1,4 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
+
 # resource_group
 
 This module manages Azure ResourceGroups.
@@ -7,35 +8,35 @@ This module manages Azure ResourceGroups.
 
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | >=0.12 |
-| azurerm | >=2.19.0 |
+| Name      | Version  |
+| --------- | -------- |
+| terraform | >=0.12   |
+| azurerm   | >=2.19.0 |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
+| Name    | Version  |
+| ------- | -------- |
 | azurerm | >=2.19.0 |
 
 ## Resources
 
-| Name | Type |
-|------|------|
+| Name                                  | Type     |
+| ------------------------------------- | -------- |
 | azurerm_resource_group.resource_group | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| location | location where the resource should be created | `string` | n/a | yes |
-| resource_name | Azure ResourceGroup | `set(string)` | n/a | yes |
-| tags | mapping of tags to assign, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| Name          | Description                                                                                        | Type          | Default | Required |
+| ------------- | -------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
+| location      | location where the resource should be created                                                      | `string`      | n/a     |   yes    |
+| resource_name | Azure ResourceGroup                                                                                | `set(string)` | n/a     |   yes    |
+| tags          | mapping of tags to assign, default settings are defined within locals and merged with var settings | `any`         | `{}`    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
+| Name           | Description                    |
+| -------------- | ------------------------------ |
 | resource_group | azurerm_resource_group results |
 
 ## Examples
@@ -55,4 +56,5 @@ module "resource-groups" {
   }
 }
 ```
+
 <!-- END_TF_DOCS -->
