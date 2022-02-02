@@ -28,9 +28,7 @@ This module manages Azure ResourceGroups.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| location | location where the resource should be created | `string` | n/a | yes |
-| resource_name | Azure ResourceGroup | `set(string)` | n/a | yes |
-| tags | mapping of tags to assign, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| resource_group | mapping of tags to assign, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 
 ## Outputs
 
@@ -41,17 +39,23 @@ This module manages Azure ResourceGroups.
 ## Examples
 
 ```hcl
-module "resource-groups" {
-  source   = "../terraform-resourcegroup"
-  location = "westeurope"
-  resource_name = [
-    service-mgmt-rg,
-    service-mgmt-rg,
-    service-mgmt-live-rg,
-    service-mgmt-test-rg,
-  ]
-  tags = {
-    service = "service_name"
+module "resource_group" {
+  source = "../terraform-resourcegroup"
+  resource_group = {
+    mgmt = {
+      name     = "service-mgmt-rg"
+      location = "westeurope"
+      tags = {
+        service = "service_name"
+      }
+    }
+    live = {
+      name     = "service-live-rg"
+      location = "westeurope"
+      tags = {
+        service = "service_name"
+      }
+    }
   }
 }
 ```
