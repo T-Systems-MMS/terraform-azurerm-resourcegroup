@@ -5,15 +5,12 @@
  *
 */
 resource "azurerm_resource_group" "resource_group" {
-  for_each = var.resource_name
+  for_each = var.resource_group
 
-  name     = each.key
-  location = var.location
+  name     = local.resource_group[each.key].name == "" ? each.key : local.resource_group[each.key].name
+  location = local.resource_group[each.key].location
 
-  tags = {
-    for tag in keys(local.tags) :
-    tag => local.tags[tag]
-  }
+  tags = local.resource_group[each.key].tags
 
   lifecycle {
     prevent_destroy = true

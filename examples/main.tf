@@ -1,13 +1,19 @@
-module "resource-groups" {
-  source   = "../terraform-resourcegroup"
-  location = "westeurope"
-  resource_name = [
-    service-mgmt-rg,
-    service-mgmt-rg,
-    service-mgmt-live-rg,
-    service-mgmt-test-rg,
-  ]
-  tags = {
-    service = "service_name"
+module "resource_group" {
+  source = "../terraform-resourcegroup"
+  resource_group = {
+    mgmt = {
+      name     = "service-mgmt-rg"
+      location = "westeurope"
+      tags = {
+        service = "service_name"
+      }
+    }
+    live = {
+      name     = "service-live-rg"
+      location = "westeurope"
+      tags = {
+        service = "service_name"
+      }
+    }
   }
 }
