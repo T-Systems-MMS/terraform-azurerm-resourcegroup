@@ -1,13 +1,13 @@
 # Changelog
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-resourcegroup/tree/0.0.1) (2021-12-16)
+## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/tree/0.0.1) (2021-12-16)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-resourcegroup/compare/5f4ec8cbbb6c2fedaa475609c6c3a728e07fd71c...0.0.1)
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/compare/5f4ec8cbbb6c2fedaa475609c6c3a728e07fd71c...0.0.1)
 
 **Merged pull requests:**
 
-- fix: correct release definition [\#2](https://github.com/T-Systems-MMS/terraform-resourcegroup/pull/2) ([michaelamattes](https://github.com/michaelamattes))
-- fix: move to github [\#1](https://github.com/T-Systems-MMS/terraform-resourcegroup/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+- fix: correct release definition [\#2](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/pull/2) ([michaelamattes](https://github.com/michaelamattes))
+- fix: move to github [\#1](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/pull/1) ([michaelamattes](https://github.com/michaelamattes))
 
 
 

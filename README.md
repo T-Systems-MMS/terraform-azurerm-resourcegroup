@@ -40,7 +40,7 @@ This module manages Azure ResourceGroups.
 
 ```hcl
 module "resource_group" {
-  source = "../terraform-resourcegroup"
+  source = "registry.terraform.io/T-Systems-MMS/resourcegroup/azurerm"
   resource_group = {
     mgmt = {
       name     = "service-mgmt-rg"
