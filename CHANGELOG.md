@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.0](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/tree/1.0.0) (2022-02-17)
+
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/compare/0.0.1...1.0.0)
+
 ## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/tree/0.0.1) (2021-12-16)
 
 [Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-resourcegroup/compare/5f4ec8cbbb6c2fedaa475609c6c3a728e07fd71c...0.0.1)
