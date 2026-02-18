@@ -1,3 +1,9 @@
+
+This module is deprecated.
+
+We restructured the resources based on the API. The current version can be found here. https://github.com/telekom-mms/terraform-azurerm-base
+
+
 <!-- BEGIN_TF_DOCS -->
 # resource_group
 
